@@ -7,6 +7,7 @@
     "git": "^0.1.5",
     "react": "^16.6.3",
     "react-async-script-loader": "^0.3.0",
+    "react-bootstrap": "^1.5.2",
     "react-dom": "^16.6.3",
     "react-paypal-express-checkout": "^1.0.5",
     "react-router-dom": "^4.3.1",
