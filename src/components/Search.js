@@ -11,6 +11,10 @@ export default class Search extends Component {
           [e.target.id]: e.target.value,
         });
     };
+
+    handleSubmit = () => {
+
+    }
     render() {
 
         if(this.state.search === "about"){
@@ -22,7 +26,7 @@ export default class Search extends Component {
             <div className="row">
                 <input
                     type="text"
-                    style={{
+                    style={{    
                         width:'300px',
                         zIndex:'0 '
                     }}
@@ -36,7 +40,9 @@ export default class Search extends Component {
                     aria-describedby="input-check-3834 "
                     value={this.state.search}
                 />
-                <div className="circle" style={{}}><AiOutlineSearch/></div>
+                <div className="circle" onClick={this.handleSubmit}>
+                    <AiOutlineSearch style={{width:'40px', height:'40px', color:'white', cursor:'pointer'}}/>
+                </div>
             </div>
         )
     }

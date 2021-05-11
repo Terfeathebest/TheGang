@@ -45,7 +45,7 @@ https://www.iconfinder.com/Makoto_msk */}
               }}
             >
               <Search/>
-              <div style={{marginLeft: '20px'}}>
+              <div style={{marginLeft: '40px'}}>
                 <Link to="/cart" className="ml-auto">
                   <ButtonContainer>
                     <span className="mr-2">
