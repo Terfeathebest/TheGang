@@ -41,7 +41,9 @@ export default class Search extends Component {
                     value={this.state.search}
                 />
                 <div className="circle" onClick={this.handleSubmit}>
-                    <AiOutlineSearch style={{width:'40px', height:'40px', color:'white', cursor:'pointer'}}/>
+                    <div style={{background:'grey', borderRadius:'5px'}}>
+                        <AiOutlineSearch style={{width:'50px', height:'48px', color:'white', cursor:'pointer'}}/>
+                    </div>
                 </div>
             </div>
         )
