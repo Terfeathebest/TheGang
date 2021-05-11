@@ -11,6 +11,7 @@ import Modal from "./components/Modal";
 import Home from "./components/Home";
 import Account from './components/Account'
 import SignUp from "./components/SignUp";
+
 class App extends Component {
   render() {
     return (
