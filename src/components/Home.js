@@ -6,7 +6,7 @@ import './navbar.css'
 export default class Home extends Component {
     render() {
         return (
-            <div>
+            <div style={{margin:'0 auto'}}>
                 <img src={img} alt="img" className="smile"/>
                 <br/>
                 <br/>

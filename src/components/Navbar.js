@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import img from '../img/Untitled.png'
 import { ButtonContainer } from "./Button";
+import Search from "./Search";
 
 export default class Header extends Component {
   render() {
@@ -14,7 +15,9 @@ https://www.iconfinder.com/icons/1243689/call_phone_icon
 Creative Commons (Attribution 3.0 Unported);
 https://www.iconfinder.com/Makoto_msk */}
         <Navbar.Brand to="/">
-          <img src={img} alt="store" style={{width:'200px', height:'100px'}} className="navbar-brand" /> THE GANG
+          <Link to="/" style={{textDecoration:'none', color:'white'}}>
+            <img src={img} alt="store" style={{width:'200px', height:'100px'}} className="navbar-brand" /> THE GANG
+          </Link>
         </Navbar.Brand>
         <Navbar.Toggle
           className="center"
@@ -23,21 +26,37 @@ https://www.iconfinder.com/Makoto_msk */}
           variant="dark"
         />
         <Navbar.Collapse id="basic-navbar-nav">
-        <ul className="navbar-nav align-items-center">
-          <li className="nav-item ml-5">
-            <Nav.Link to="/" className="nav-link ml ml-auto">
-              products
-            </Nav.Link>
-          </li>
-        </ul>
-        <Link to="/cart" className="ml-auto">
-          <ButtonContainer>
-            <span className="mr-2">
-              <i className="fas fa-cart-plus " />
-            </span>
-            my cart
-          </ButtonContainer>
-        </Link>
+          {/* <Nav.Item> */}
+          <ul className="navbar-nav align-items-center">
+            <li className="nav-item ml-5">
+              <Link to="/products" className="nav-link ml ml-auto">
+                products
+              </Link>
+            </li>
+          </ul>
+          {/* </Nav.Item> */}
+          {/* <Nav.Item> */}
+            <div className="ml-auto row" 
+              style={{
+                display: 'flex', 
+                justifyContent: "space-around",
+                // width: '100%', 
+                width: 'inherit',
+              }}
+            >
+              <Search/>
+              <div style={{marginLeft: '20px'}}>
+                <Link to="/cart" className="ml-auto">
+                  <ButtonContainer>
+                    <span className="mr-2">
+                      <i className="fas fa-cart-plus " />
+                    </span>
+                    my cart
+                  </ButtonContainer>
+                </Link>
+              </div>
+            </div>
+          {/* </Nav.Item> */}
         </Navbar.Collapse>
       </Nav1>
     );

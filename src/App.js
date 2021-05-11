@@ -9,19 +9,21 @@ import Default from "./components/Default";
 import Cart from "./components/Cart";
 import Modal from "./components/Modal";
 import Home from "./components/Home";
+import SignUp from "./components/SignUp";
 class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <Navbar />
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/products" component={ProductList} />
-          <Route path="/details" component={Details} />
-          <Route path="/cart" component={Cart} />
-          <Route component={Default} />
-        </Switch>
-        <Modal />
+          <Navbar />
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/products" component={ProductList} />
+            <Route exact path="/signup" component={SignUp} />
+            <Route path="/details" component={Details} />
+            <Route path="/cart" component={Cart} />
+            <Route component={Default} />
+          </Switch>
+          <Modal />
       </React.Fragment>
     );
   }
